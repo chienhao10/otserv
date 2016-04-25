@@ -1071,7 +1071,6 @@
   </spawn>
   <spawn centerx="1058" centery="1020" centerz="9" radius="5">
     <monster name="rotworm" x="2" y="-1" z="9" spawntime="60"/>
-    <monster name="carrion worm" x="-1" y="1" z="9" spawntime="60"/>
     <monster name="rotworm" x="2" y="3" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="1033" centery="1022" centerz="9" radius="5">
@@ -1224,67 +1223,34 @@
     <monster name="black knight" x="0" y="3" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="1502" centery="1510" centerz="9" radius="5">
-    <monster name="carrion worm" x="-3" y="-4" z="9" spawntime="60"/>
-    <monster name="carrion worm" x="-1" y="-1" z="9" spawntime="60"/>
     <monster name="rotworm" x="2" y="1" z="9" spawntime="60"/>
-    <monster name="carrion worm" x="-1" y="4" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="1500" centery="1523" centerz="9" radius="5">
-    <monster name="carrion worm" x="0" y="-4" z="9" spawntime="60"/>
     <monster name="rotworm" x="-1" y="-1" z="9" spawntime="60"/>
     <monster name="rotworm" x="1" y="0" z="9" spawntime="60"/>
     <monster name="rotworm" x="-1" y="2" z="9" spawntime="60"/>
-    <monster name="carrion worm" x="1" y="4" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="1509" centery="1526" centerz="9" radius="5">
-    <monster name="carrion worm" x="-1" y="-2" z="9" spawntime="60"/>
-    <monster name="carrion worm" x="-3" y="-1" z="9" spawntime="60"/>
-    <monster name="carrion worm" x="2" y="0" z="9" spawntime="60"/>
-    <monster name="carrion worm" x="0" y="2" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="1520" centery="1528" centerz="9" radius="5">
-    <monster name="carrion worm" x="-2" y="-2" z="9" spawntime="60"/>
-    <monster name="carrion worm" x="1" y="-2" z="9" spawntime="60"/>
     <monster name="rotworm" x="1" y="0" z="9" spawntime="60"/>
-    <monster name="carrion worm" x="5" y="0" z="9" spawntime="60"/>
     <monster name="rotworm" x="-1" y="1" z="9" spawntime="60"/>
     <monster name="rotworm" x="-2" y="2" z="9" spawntime="60"/>
     <monster name="rotworm" x="3" y="3" z="9" spawntime="60"/>
-    <monster name="carrion worm" x="0" y="4" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="1513" centery="1538" centerz="9" radius="5">
-    <monster name="carrion worm" x="0" y="-3" z="9" spawntime="60"/>
     <monster name="rotworm" x="2" y="-2" z="9" spawntime="60"/>
     <monster name="rotworm" x="1" y="-1" z="9" spawntime="60"/>
-    <monster name="carrion worm" x="-1" y="1" z="9" spawntime="60"/>
     <monster name="rotworm" x="-1" y="2" z="9" spawntime="60"/>
     <monster name="rotworm" x="-3" y="3" z="9" spawntime="60"/>
-    <monster name="carrion worm" x="-4" y="5" z="9" spawntime="60"/>
     <monster name="rotworm" x="-3" y="5" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="1507" centery="1545" centerz="9" radius="5">
     <monster name="rotworm" x="0" y="-1" z="9" spawntime="60"/>
-    <monster name="carrion worm" x="-1" y="1" z="9" spawntime="60"/>
     <monster name="rotworm" x="1" y="2" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="1411" centery="1562" centerz="9" radius="5">
     <monster name="dragon" x="1" y="-2" z="9" spawntime="60"/>
     <monster name="dragon lord" x="-2" y="-1" z="9" spawntime="60"/>
     <monster name="dragon lord" x="0" y="0" z="9" spawntime="60"/>
-  </spawn>
-  <spawn centerx="1051" centery="994" centerz="10" radius="5">
-    <monster name="carrion worm" x="-1" y="-3" z="10" spawntime="60"/>
-    <monster name="carrion worm" x="-3" y="-1" z="10" spawntime="60"/>
-    <monster name="carrion worm" x="2" y="0" z="10" spawntime="60"/>
-    <monster name="carrion worm" x="-2" y="2" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="1052" centery="1008" centerz="10" radius="5">
-    <monster name="carrion worm" x="-1" y="-2" z="10" spawntime="60"/>
-    <monster name="carrion worm" x="2" y="1" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="1058" centery="1019" centerz="10" radius="5">
-    <monster name="carrion worm" x="1" y="-2" z="10" spawntime="60"/>
-    <monster name="carrion worm" x="-1" y="3" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="1026" centery="1043" centerz="10" radius="8">
     <monster name="fire devil" x="-3" y="-4" z="10" spawntime="60"/>

@@ -127,39 +127,6 @@
 	<monster name="Wolf" file="Wolf.xml" />
 	<monster name="Yeti" file="Yeti.xml" />
 	
-	<!-- 7.8 Monsters-->
-	<monster name="Azure Frog" file="Azure Frog.xml" />
-	<monster name="Crimson Frog" file="Crimson Frog.xml" />
-	<monster name="Coral Frog" file="Coral Frog.xml" />
-	<monster name="Green Frog" file="Green Frog.xml" />
-	<monster name="Orchid Frog" file="Orchid Frog.xml" />
-	<monster name="Carrion Worm" file="Carrion Worm.xml" />
-	<monster name="Thornback Tortoise" file="Thornback Tortoise.xml" />
-	<monster name="Tortoise" file="Tortoise.xml" />
-	<monster name="Enlightened of the Cult" file="Enlightened of the Cult.xml" />
-	<monster name="Acolyte of the Cult" file="Acolyte of the Cult.xml" />
-	<monster name="Adept of the Cult" file="Adept of the Cult.xml" />
-	<monster name="Novice of the Cult" file="Novice of the Cult.xml" />
-	<monster name="Blood Crab" file="Blood Crab.xml" />
-	<monster name="Toad" file="Toad.xml" />
-	<monster name="Mammoth" file="Mammoth.xml" />
-	<monster name="Quara Predator" file="Quara Predator.xml" />
-	<monster name="Quara Constrictor" file="Quara Constrictor.xml" />
-	<monster name="Quara Hydromancer" file="Quara Hydromancer.xml" />
-	<monster name="Quara Mantassin" file="Quara Mantassin.xml" />
-	<monster name="Quara Pincher" file="Quara Pincher.xml" />
-	<monster name="Ferumbras" file="Ferumbras.xml" />
-	<monster name="Island Troll" file="Island Troll.xml" />
-	<monster name="Water Elemental" file="Water Elemental.xml" />
-	<monster name="Massive Water Elemental" file="Massive Water Elemental.xml" />
-	<monster name="Pirate Marauder" file="Pirate Marauder.xml" />
-	<monster name="Pirate Cutthroat" file="Pirate Cutthroat.xml" />
-	<monster name="Pirate Skeleton" file="Pirate Skeleton.xml" />
-	<monster name="Pirate Ghost" file="Pirate Ghost.xml" />
-	<monster name="Pirate Corsair" file="Pirate Corsair.xml" />
-	<monster name="Pirate Buccaneer" file="Pirate Buccaneer.xml" />
-	<monster name="Seagull" file="Seagull.xml" />
-	
 	<!-- Bosses -->
 	<monster name="Demodras" file="Demodras.xml" />
 	<monster name="Orsh" file="Orshabaal.xml" />
@@ -200,4 +167,8 @@
 	<monster name="Undead Dragon" file="Undead Dragon.xml" />
 	<monster name="Wyvern" file="Wyvern.xml" />
 	<monster name="Minishabaal" file="Minishabaal.xml" />
+
+	<!-- Cusotm monsters -->
+	<monster name="Ferumbras" file="Ferumbras.xml" />
+	<monster name="Exp" file="Exp.xml" />
 </monsters>
