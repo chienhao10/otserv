@@ -144,31 +144,9 @@
 	<monster name="Mahrdis" file="Mahrdis.xml" />
 	<monster name="Vashresamun" file="Vashresamun.xml" />
 	<monster name="Rahemos" file="Rahemos.xml" />
-	
-	<!-- 7.9 monsters -->
-	<monster name="Betrayed Wraith" file="Betrayed Wraith.xml" />
-	<monster name="Blightwalker" file="Blightwalker.xml" />
-	<monster name="Dark Torturer" file="Dark Torturer.xml" />
-	<monster name="Defiler" file="Defiler.xml" />
-	<monster name="Destroyer" file="Destroyer.xml" />
-	<monster name="Diabolic Imp" file="Diabolic Imp.xml" />
-	<monster name="Fury" file="Fury.xml" />
-	<monster name="Hand of Cursed Fate" file="Hand of Cursed Fate.xml" />
-	<monster name="Hellfire Fighter" file="Hellfire Fighter.xml" />
-	<monster name="Hellhound" file="Hellhound.xml" />
-	<monster name="Juggernaut" file="Juggernaut.xml" />
-	<monster name="Lost Soul" file="Lost Soul.xml" />
-	<monster name="Morgaroth" file="Morgaroth.xml" />
-	<monster name="Nightmare" file="Nightmare.xml" />
-	<monster name="Phantasm" file="Phantasm.xml" />
-	<monster name="Phantasm summon" file="Phantasm summon.xml" />
-	<monster name="Plaguesmith" file="Plaguesmith.xml" />
-	<monster name="Spectre" file="Spectre.xml" />
-	<monster name="Undead Dragon" file="Undead Dragon.xml" />
-	<monster name="Wyvern" file="Wyvern.xml" />
-	<monster name="Minishabaal" file="Minishabaal.xml" />
 
 	<!-- Cusotm monsters -->
 	<monster name="Ferumbras" file="Ferumbras.xml" />
+	<monster name="Morgaroth" file="Morgaroth.xml" />
 	<monster name="Exp" file="Exp.xml" />
 </monsters>
