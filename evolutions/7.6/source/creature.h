@@ -198,7 +198,7 @@ public:
 
 	virtual void die();
 	virtual Item* getCorpse();
-	virtual int64_t getGainedExperience(Creature* attacker) const;
+	virtual uint64_t getGainedExperience(Creature* attacker) const;
 	virtual bool addDamagePoints(Creature* attacker, int32_t damagePoints);
 	bool hasBeenAttacked(uint32_t attackerId);
 

@@ -191,12 +191,4 @@ struct Death
 	time_t time;
 };
 #endif
-
-#ifdef __XID_EXPERIENCE_STAGES__
-struct Stage_t
-{
-	__int64 minLv, maxLv, expMul;
-};
-#endif
-
 #endif

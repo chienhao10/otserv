@@ -502,6 +502,12 @@ int main(int argc, char *argv[])
 		std::cout << "Heap Error" << std::endl;
 	}
 #endif
+
+#if defined WIN32 || defined WINDOWS
+    system("color 5f");
+    system("title Evolutions Server");
+#endif
+
     std::cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::" << std::endl;
     std::cout << "::   Evolutions Development-Version 0.7.8 based on OTServ SVN Version 0.6.0  ::" << std::endl;
     std::cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::" << std::endl;
@@ -641,7 +647,7 @@ int main(int argc, char *argv[])
 	std::cout << "[done]" << std::endl;
 	#endif	
 
-	#ifdef __XID_EXPERIENCE_STAGES__
+	#ifdef __TFS_EXPERIENCE_STAGES__
 	//load experience stages
 	filename.str("");
 	filename << g_config.getString(ConfigManager::DATA_DIRECTORY) << "stages.xml";

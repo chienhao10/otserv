@@ -351,9 +351,9 @@ public:
 	void manageAccount(Player *player, const std::string &text);
 	#endif
 	
-	#ifdef __XID_EXPERIENCE_STAGES__
+	#ifdef __TFS_EXPERIENCE_STAGES__
 	bool loadExperienceStages();
-	__int64 getExperienceStage(int32_t level);
+	uint64_t getExperienceStage(uint32_t level);
 	#endif
 	
 	GameState_t getGameState();
@@ -444,9 +444,12 @@ protected:
 	void addCommandTag(std::string tag);
 	void resetCommandTag();
 
-	#ifdef __XID_EXPERIENCE_STAGES__
-	typedef std::list<Stage_t> StageList;
-	StageList stageList;
+	#ifdef __TFS_EXPERIENCE_STAGES__
+	typedef std::map<int32_t,int32_t> StageList;
+	StageList stages;
+	bool stagesEnabled;
+	uint32_t lastStageLevel;
+	bool useLastStageLevel;
 	#endif
 
 	friend class Commands;

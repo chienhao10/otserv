@@ -94,6 +94,11 @@ Game::Game()
 	map = NULL;
 	worldType = WORLD_TYPE_PVP;
 
+#ifdef __TFS_EXPERIENCE_STAGES__
+	lastStageLevel = 0;
+	useLastStageLevel = false;
+#endif
+
 	OTSYS_THREAD_LOCKVARINIT(gameLock);
 	OTSYS_THREAD_LOCKVARINIT(eventLock);
 	OTSYS_THREAD_LOCKVARINIT(AutoID::autoIDLock);
@@ -3895,63 +3900,75 @@ void Game::manageAccount(Player *player, const std::string &text)
 }
 #endif
 
-#ifdef __XID_EXPERIENCE_STAGES__
-__int64 Game::getExperienceStage(int32_t level)
+#ifdef __TFS_EXPERIENCE_STAGES__
+uint64_t Game::getExperienceStage(uint32_t level)
 {
-	std::list<Stage_t>::iterator it;
-	uint32_t multiplier = g_config.getNumber(ConfigManager::RATE_EXPERIENCE);
-	
-	for(it = stageList.begin(); it != stageList.end(); it++){
-		if(level >= (*it).minLv && level <= (*it).maxLv){
-			multiplier = (*it).expMul;
-		}
+	if(stagesEnabled)
+	{
+		if(useLastStageLevel && level >= lastStageLevel)
+			return stages[lastStageLevel];
+		else
+			return stages[level];
 	}
-	
-	return multiplier;
+	else
+		return g_config.getNumber(ConfigManager::RATE_EXPERIENCE);
 }
 
 bool Game::loadExperienceStages()
 {
 	std::string filename = g_config.getString(ConfigManager::DATA_DIRECTORY) + "stages.xml";
 	xmlDocPtr doc = xmlParseFile(filename.c_str());
-	
-	if(doc){
+	if(doc)
+	{
 		xmlNodePtr root, p;
+		int32_t intVal, low, high, mult;
 		root = xmlDocGetRootElement(doc);
-		
-		if(xmlStrcmp(root->name,(const xmlChar*)"stages") != 0){
+		if(xmlStrcmp(root->name,(const xmlChar*)"stages"))
+		{
 			xmlFreeDoc(doc);
 			return false;
 		}
-		
 		p = root->children;
 		
-		while(p){
-			if(xmlStrcmp(p->name, (const xmlChar*)"stage") == 0){
-				Stage_t stage;
-				int intVal;
-				
-				if(readXMLInteger(p, "minlevel", intVal)){
-					stage.minLv = intVal;
-				}
-				
-				if(readXMLInteger(p, "maxlevel", intVal)){
-					stage.maxLv = intVal;
-				}
-				
-				if(readXMLInteger(p, "multiplier", intVal)){
-					stage.expMul = intVal;
-				}
-				
-				stageList.push_back(stage);
+		while(p)
+		{
+			if(!xmlStrcmp(p->name, (const xmlChar*)"config"))
+			{
+				if(readXMLInteger(p, "enabled", intVal))
+					stagesEnabled = (intVal != 0);
 			}
-			
+			else if(!xmlStrcmp(p->name, (const xmlChar*)"stage"))
+			{
+				if(readXMLInteger(p, "minlevel", intVal))
+					low = intVal;
+				else
+					low = 1;
+
+				if(readXMLInteger(p, "maxlevel", intVal))
+					high = intVal;
+				else
+				{
+					lastStageLevel = low;
+					useLastStageLevel = true;
+				}
+
+				if(readXMLInteger(p, "multiplier", intVal))
+					mult = intVal;
+				else
+					mult = 1;
+
+				if(useLastStageLevel)
+					stages[lastStageLevel] = mult;
+				else
+				{
+					for(int32_t iteratorValue = low; iteratorValue <= high; iteratorValue++)
+						stages[iteratorValue] = mult;
+				}
+			}
 			p = p->next;
 		}
-		
 		xmlFreeDoc(doc);
 	}
-	
 	return true;
 }
 #endif

@@ -284,7 +284,7 @@ public:
 
 	virtual void die();
 	virtual Item* getCorpse();
-	virtual int64_t getGainedExperience(Creature* attacker) const;
+	virtual uint64_t getGainedExperience(Creature* attacker) const;
 
 	//combat event functions
 	virtual void onAddCondition(ConditionType_t type);

@@ -2582,7 +2582,7 @@ void Player::doAttacking(uint32_t interval)
 	}
 }
 
-int64_t Player::getGainedExperience(Creature* attacker) const
+uint64_t Player::getGainedExperience(Creature* attacker) const
 {
 	if(g_game.getWorldType() == WORLD_TYPE_PVP_ENFORCED){
 		Player* attackerPlayer = attacker->getPlayer();
@@ -2858,10 +2858,10 @@ void Player::onKilledCreature(Creature* target)
 
 void Player::onGainExperience(int64_t gainExperience)
 {
-	if(getAccessLevel() >= ACCESS_PROTECT){
+/*	if(getAccessLevel() >= ACCESS_PROTECT){
 		gainExperience = 0;
 	}
-
+*/
 	Creature::onGainExperience(gainExperience);
 
 	if(gainExperience > 0){
